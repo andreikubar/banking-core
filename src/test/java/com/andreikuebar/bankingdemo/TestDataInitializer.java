@@ -1,8 +1,8 @@
-package com.andreikuebar.bankingcore;
+package com.andreikuebar.bankingdemo;
 
-import com.andreikuebar.bankingcore.model.Account;
-import com.andreikuebar.bankingcore.repository.AccountRepository;
-import com.andreikuebar.bankingcore.repository.TransactionRepository;
+import com.andreikuebar.bankingdemo.model.Account;
+import com.andreikuebar.bankingdemo.repository.AccountRepository;
+import com.andreikuebar.bankingdemo.repository.TransactionRepository;
 
 public class TestDataInitializer {
     public static final String SOURCE_ACCOUNT_NUMBER = "1";

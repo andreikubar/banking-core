@@ -1,4 +1,4 @@
-package com.andreikuebar.bankingcore.model;
+package com.andreikuebar.bankingdemo.model;
 
 public class TransactionInfo {
     private Long transactionId;

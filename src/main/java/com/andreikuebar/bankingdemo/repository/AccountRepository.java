@@ -1,6 +1,6 @@
-package com.andreikuebar.bankingcore.repository;
+package com.andreikuebar.bankingdemo.repository;
 
-import com.andreikuebar.bankingcore.model.Account;
+import com.andreikuebar.bankingdemo.model.Account;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Lock;
 

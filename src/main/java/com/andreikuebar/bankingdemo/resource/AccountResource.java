@@ -1,12 +1,12 @@
-package com.andreikuebar.bankingcore.resource;
+package com.andreikuebar.bankingdemo.resource;
 
-import com.andreikuebar.bankingcore.model.*;
-import com.andreikuebar.bankingcore.repository.AccountRepository;
-import com.andreikuebar.bankingcore.repository.TransactionRepository;
-import com.andreikuebar.bankingcore.service.AccountBalanceTooSmallException;
-import com.andreikuebar.bankingcore.service.AccountNotFoundException;
-import com.andreikuebar.bankingcore.service.InvalidAmountException;
-import com.andreikuebar.bankingcore.service.SendMoneyService;
+import com.andreikuebar.bankingdemo.model.*;
+import com.andreikuebar.bankingdemo.repository.AccountRepository;
+import com.andreikuebar.bankingdemo.repository.TransactionRepository;
+import com.andreikuebar.bankingdemo.service.AccountBalanceTooSmallException;
+import com.andreikuebar.bankingdemo.service.AccountNotFoundException;
+import com.andreikuebar.bankingdemo.service.InvalidAmountException;
+import com.andreikuebar.bankingdemo.service.SendMoneyService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;

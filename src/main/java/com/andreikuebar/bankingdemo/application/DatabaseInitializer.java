@@ -1,7 +1,7 @@
-package com.andreikuebar.bankingcore.application;
+package com.andreikuebar.bankingdemo.application;
 
-import com.andreikuebar.bankingcore.model.Account;
-import com.andreikuebar.bankingcore.repository.AccountRepository;
+import com.andreikuebar.bankingdemo.model.Account;
+import com.andreikuebar.bankingdemo.repository.AccountRepository;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.context.event.EventListener;
 

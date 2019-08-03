@@ -1,7 +1,7 @@
-package com.andreikuebar.bankingcore;
+package com.andreikuebar.bankingdemo;
 
-import com.andreikuebar.bankingcore.repository.AccountRepository;
-import com.andreikuebar.bankingcore.repository.TransactionRepository;
+import com.andreikuebar.bankingdemo.repository.AccountRepository;
+import com.andreikuebar.bankingdemo.repository.TransactionRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

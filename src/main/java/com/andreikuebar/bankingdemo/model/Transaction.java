@@ -1,4 +1,4 @@
-package com.andreikuebar.bankingcore.model;
+package com.andreikuebar.bankingdemo.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

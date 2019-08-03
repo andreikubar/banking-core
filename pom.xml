@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.andreikuebar</groupId>
-	<artifactId>banking-core</artifactId>
+	<artifactId>banking-demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>banking-core</name>
+	<name>banking-demo</name>
 	<description>Demo project for core banking implementation</description>
 
 	<properties>

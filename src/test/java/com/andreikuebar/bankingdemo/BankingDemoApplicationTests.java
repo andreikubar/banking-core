@@ -1,11 +1,11 @@
-package com.andreikuebar.bankingcore;
+package com.andreikuebar.bankingdemo;
 
-import com.andreikuebar.bankingcore.application.BankingCoreApplication;
-import com.andreikuebar.bankingcore.model.Account;
-import com.andreikuebar.bankingcore.repository.AccountRepository;
-import com.andreikuebar.bankingcore.service.AccountNotFoundException;
-import com.andreikuebar.bankingcore.service.InvalidAmountException;
-import com.andreikuebar.bankingcore.service.SendMoneyService;
+import com.andreikuebar.bankingdemo.application.BankingDemoApplication;
+import com.andreikuebar.bankingdemo.model.Account;
+import com.andreikuebar.bankingdemo.repository.AccountRepository;
+import com.andreikuebar.bankingdemo.service.AccountNotFoundException;
+import com.andreikuebar.bankingdemo.service.InvalidAmountException;
+import com.andreikuebar.bankingdemo.service.SendMoneyService;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -14,11 +14,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
-import static com.andreikuebar.bankingcore.TestDataInitializer.*;
+import static com.andreikuebar.bankingdemo.TestDataInitializer.*;
 
-@SpringBootTest(classes = {BankingCoreApplication.class, TestConfiguration.class})
+@SpringBootTest(classes = {BankingDemoApplication.class, TestConfiguration.class})
 @ActiveProfiles("test")
-public class BankingCoreApplicationTests {
+public class BankingDemoApplicationTests {
 
     @Autowired
     private SendMoneyService sendMoneyService;

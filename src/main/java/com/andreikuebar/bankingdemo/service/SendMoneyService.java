@@ -1,9 +1,9 @@
-package com.andreikuebar.bankingcore.service;
+package com.andreikuebar.bankingdemo.service;
 
-import com.andreikuebar.bankingcore.model.Account;
-import com.andreikuebar.bankingcore.model.Transaction;
-import com.andreikuebar.bankingcore.repository.AccountRepository;
-import com.andreikuebar.bankingcore.repository.TransactionRepository;
+import com.andreikuebar.bankingdemo.model.Account;
+import com.andreikuebar.bankingdemo.model.Transaction;
+import com.andreikuebar.bankingdemo.repository.AccountRepository;
+import com.andreikuebar.bankingdemo.repository.TransactionRepository;
 import com.google.common.collect.ImmutableList;
 import org.springframework.transaction.annotation.Transactional;
 

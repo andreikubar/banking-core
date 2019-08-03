@@ -1,7 +1,7 @@
-package com.andreikuebar.bankingcore;
+package com.andreikuebar.bankingdemo;
 
-import com.andreikuebar.bankingcore.application.BankingCoreApplication;
-import com.andreikuebar.bankingcore.model.AccountStatementResponse;
+import com.andreikuebar.bankingdemo.application.BankingDemoApplication;
+import com.andreikuebar.bankingdemo.model.AccountStatementResponse;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import org.junit.jupiter.api.*;
@@ -15,16 +15,16 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.ActiveProfiles;
 
-import static com.andreikuebar.bankingcore.TestDataInitializer.SOURCE_ACCOUNT_NUMBER;
-import static com.andreikuebar.bankingcore.TestDataInitializer.TARGET_ACCOUNT_NUMBER;
+import static com.andreikuebar.bankingdemo.TestDataInitializer.SOURCE_ACCOUNT_NUMBER;
+import static com.andreikuebar.bankingdemo.TestDataInitializer.TARGET_ACCOUNT_NUMBER;
 
 @ActiveProfiles("test")
-@SpringBootTest(classes = {BankingCoreApplication.class, TestConfiguration.class}, webEnvironment = WebEnvironment.RANDOM_PORT)
+@SpringBootTest(classes = {BankingDemoApplication.class, TestConfiguration.class}, webEnvironment = WebEnvironment.RANDOM_PORT)
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-public class BankingCoreHttpTests {
+public class BankingDemoHttpTests {
 
     private static final String ACCOUNTS_STATEMENT_ENDPOINT = "/accounts/statement";
-    public static final String ACCOUNTS_TRANSFER_ENDPOINT = "/accounts/transfer";
+    private static final String ACCOUNTS_TRANSFER_ENDPOINT = "/accounts/transfer";
 
     @LocalServerPort
     private int port;

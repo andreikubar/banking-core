@@ -1,4 +1,4 @@
-package com.andreikuebar.bankingcore.service;
+package com.andreikuebar.bankingdemo.service;
 
 public class InvalidAmountException extends RuntimeException {
 
