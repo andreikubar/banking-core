@@ -46,11 +46,11 @@ public class BankingDemoHttpTests {
     @Test
     public void verifyAccountTransfer(){
         String hostname = "http://localhost:" + port;
-        ObjectNode request = objectMapper.createObjectNode();
-        request.put("sourceAccount", SOURCE_ACCOUNT_NUMBER);
-        request.put("targetAccount", TARGET_ACCOUNT_NUMBER);
         long transferAmount = 10L;
-        request.put("amount", transferAmount);
+        ObjectNode sendMoneyRequest = objectMapper.createObjectNode();
+        sendMoneyRequest.put("sourceAccount", SOURCE_ACCOUNT_NUMBER);
+        sendMoneyRequest.put("targetAccount", TARGET_ACCOUNT_NUMBER);
+        sendMoneyRequest.put("amount", transferAmount);
 
         AccountStatementResponse sourceStatement =
                 restTemplate.getForObject(hostname + ACCOUNTS_STATEMENT_ENDPOINT + "/" + SOURCE_ACCOUNT_NUMBER, AccountStatementResponse.class);
@@ -61,7 +61,7 @@ public class BankingDemoHttpTests {
         Long targetAccountInitialBalance = targetStatement.getAccountInfo().getBalance();
 
         ResponseEntity<Object>  responseEntity = restTemplate.exchange(hostname + ACCOUNTS_TRANSFER_ENDPOINT,
-                HttpMethod.POST, new HttpEntity<>(request), Object.class);
+                HttpMethod.POST, new HttpEntity<>(sendMoneyRequest), Object.class);
         Assertions.assertEquals(200, responseEntity.getStatusCodeValue());
 
         AccountStatementResponse resultingSourceAccountStatement =
@@ -73,9 +73,7 @@ public class BankingDemoHttpTests {
                 restTemplate.getForObject(hostname + ACCOUNTS_STATEMENT_ENDPOINT + "/" + TARGET_ACCOUNT_NUMBER, AccountStatementResponse.class);
         Assertions.assertEquals(targetAccountInitialBalance + transferAmount,
                 resultingTargetAccountStatement.getAccountInfo().getBalance().longValue());
-
     }
-
 
     @BeforeAll
     private void createTestAccounts() {
